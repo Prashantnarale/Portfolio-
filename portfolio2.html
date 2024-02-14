@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+      body{
+        background-image: linear-gradient(to right,#ffff66,#66ffff);
+      }
+
+ .header{
+    padding: 20px;
+    right:3%;
+    position: fixed;
+    background-color: #353c4a;
+   
+ }
+
+      .btn{
+       text-align: right;
+      }
+    .btn a {
+    padding: 24px ;
+    text-decoration: none;
+    color:white;
+       }
+ .btn a:hover{
+    color:rgb(228, 33, 212);
+ }
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+.clip {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.svg--source {
+  display: none
+}
+.svg--icon {
+  max-width: 5rem;
+  max-height: 5rem;
+}
+.wrapper {
+  
+  display: flex;
+  flex-wrap: wrap;
+  
+
+  padding: 1rem;
+}
+.share {
+  width: 5rem;
+  height: 5rem;
+  float: left;
+  margin: .5rem 1rem .5rem 0;
+  color: #353c4a;
+  border: .125rem solid #f3f3f3;
+  box-shadow: 0 0 8px 0 rgba(50, 50, 50, 0.15);
+  border-radius: 50%;
+  transition: 250ms;
+  background: #f3f3f3;
+  &:last-child {
+    margin-right: 0
+  }
+  
+  
+}
+
+.twitter {
+  &:hover,
+  &:focus {
+    color: #00ACED;
+    box-shadow: 0 0 24px 0 #00ACED
+  }
+}
+
+.github {
+  &:hover,
+  &:focus {
+    color: #4183c4;
+    box-shadow: 0 0 24px 0 #4183c4
+  }
+}
+
+
+
+
+
+.facebook {
+  &:hover,
+  &:focus {
+    color: #3b5998;
+    box-shadow: 0 0 24px 0 #3b5998
+  }
+}
+
+
+#animatedText {
+			font-size: 34px;
+			font-weight: bold;
+			color: blue;
+			
+	    }
+      .circular_image {
+  width: 200px;
+  height: 230px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: blue;
+ 
+  /*for demo*/
+  display:inline-block;
+  vertical-align:middle;
+}
+.circular_image img{
+  width:100%;
+
+}
+.event{
+  
+  position: absolute;
+  top:30%;
+  left:20%;
+}
+
+
+
+/* 
+skills */
+
+.bg{
+  background-color: rgb(44, 39, 39);
+}
+
+
+.skills-bar {
+  padding: 25px 30px;
+}
+
+.skills-bar .bar {
+  margin: 25px 0;
+}
+
+.skills-bar .bar .info span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.skills-bar .bar .info {
+  margin-bottom: 8px;
+  color: #f0f0e6;
+}
+
+.skills-bar .bar .progress-line {
+  position: relative;
+  height: 10px;
+  width: 550px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line span {
+  position: absolute;
+  background: #25b79f;
+  height: 100%;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.progress-line .html {
+  width: 80%;
+}
+.progress-line .css {
+  width: 70%;
+}
+.progress-line .bootstrap {
+  width: 50%;
+}
+.progress-line .javascript {
+  width: 80%;
+}
+.progress-line .c {
+  width: 50%;
+}
+
+.bar .progress-line span::before {
+  position: absolute;
+  content: "";
+  height: 0;
+  right: 0;
+  top: -12px;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-style: #f0f0f0;
+  border-top-color: #f0f0f0;
+}
+
+.bar .progress-line span::after {
+  position: absolute;
+  right: 0;
+  top: -28px;
+  color: #07374a;
+  font-size: 12px;
+  font-weight: 700;
+  background: #f0f0f0;
+  padding: 1px 8px;
+  border-radius: 3px;
+}
+
+.progress-line .html::after {
+  content: "80%";
+}
+.progress-line .css::after {
+  content: "70%";
+}
+.progress-line .bootstrap::after {
+  content: "50%";
+}
+.progress-line .javascript::after {
+  content: "80%";
+}
+.progress-line .c::after {
+  content: "50%";
+}
+
+.navbar.solid {
+  background-color: #07374a;
+  transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px rgb(7 55 74 / 20%);
+  z-index: 500;
+}
+
+.navbar.solid .navbar-brand {
+  display: inline-block;
+  color: #f0f0e6;
+  transition: color 1s ease 0s;
+}
+
+.navbar-brand {
+  display: none;
+  color: #f0f0e6;
+  font-weight: 400;
+}
+
+.work-arrow {
+  margin: 2rem 0;
+}
+
+.work-arrow a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #25b79f;
+}
+
+.work-arrow-2 {
+  margin: 2rem 0;
+}
+
+.work-arrow-2 a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #25b79f;
+  display: none;
+}
+
+      </style>
+</head>
+<body>
+   <div id="home"> 
+  <div class="btn">
+     <div class="header">  
+         
+            <a class="b1"  href="#home">HOME </a> 
+          <a class="b2" href="#skill"> SKILL </a>
+           <a class="b3" href="#contact">  CONTACT</a>
+          <a class="b4" href="#projects"> PROJECTS</a>
+          <a class="b4" href="#about"> ABOUT</a>
+        </div>
+      
+          </div>
+           <!-- <h1 class="hdn">About <font color="blue">me</font></h1>
+            <h1 class="hdn2">hi there!glad to see you her</h1> -->
+            <h1 class="heding">portfolio</h1>
+            <div id="animatedText">Hi, i'm Prashant  Narale</div>
+            <img class="circular_image"  src="prashant2.png" >
+            <!-- <img clss="photo" src="file:///C:/Users/BCA%2010/Desktop/tree.jpg"> -->
+            <h1 class="event"> Graduate student at the University of solapur university (punyashlok ahilyabai holkar vidhyapith solapur) pursuing a "BCA" and innovation with career interests in tech,sports, and music.
+              </h1>
+              <h3><br><br><br><br>
+                I was born and raised in SANGOLAehere I grew up in MAHUD LAKSHMI NAGAR town and always had good music playing around the house.<br>
+                I am currently pursuing a "BCA".<br>
+                I am the passionet about.Web development an hardworking student <br>
+                I have the huge knowledge about frount-end development.
+              </h3>
+<script>
+		const animatedText = document.getElementById('animatedText');
+		let colorIndex = 0;
+
+		function changeColor() {
+			const colors = ['red', 'green', 'blue', 'orange']; // Add more colors as needed
+			animatedText.style.color = colors[colorIndex];
+			colorIndex = (colorIndex + 1) % colors.length;
+		}
+
+		// Change text color every 1000 milliseconds (1 second)
+		setInterval(changeColor, 1000);
+
+
+
+
+
+
+
+   
+	</script>
+  <button class="up_arrow"><a href="#home" style=" right:5%;color: #fff;border:none; border-radius:10px; 
+    min-height:50px; min-width: 120px;
+    text-decoration: none;  font-weight: bold;font-size: 20px; position:fixed;"><img style="height:60px;width:60px;" src="up-arrow.png"></a></button>
+
+              <svg class="svg--source" width="0" height="0" aria-hidden="true">
+
+                <symbol id="svg--twitter" viewbox="0 -7 15 30">
+                  <path d="M15.36 3.434c-0.542 0.241-1.124 0.402-1.735 0.476 0.624-0.374 1.103-0.966 1.328-1.67-0.583 0.346-1.23 0.598-1.917 0.733-0.551-0.587-1.336-0.954-2.205-0.954-1.668 0-3.020 1.352-3.020 3.019 0 0.237 0.026 0.467 0.078 0.688-2.51-0.126-4.735-1.328-6.224-3.155-0.261 0.446-0.41 0.965-0.41 1.518 0 1.048 0.534 1.972 1.344 2.514-0.495-0.016-0.961-0.151-1.368-0.378 0 0.013 0 0.025 0 0.038 0 1.463 1.042 2.683 2.422 2.962-0.253 0.069-0.52 0.106-0.796 0.106-0.194 0-0.383-0.018-0.568-0.054 0.384 1.2 1.5 2.073 2.821 2.097-1.034 0.81-2.335 1.293-3.75 1.293-0.244 0-0.484-0.014-0.72-0.042 1.336 0.857 2.923 1.357 4.63 1.357 5.554 0 8.592-4.602 8.592-8.593 0-0.13-0.002-0.261-0.009-0.39 0.59-0.426 1.102-0.958 1.507-1.563z"
+                  />
+                </symbol>
+              
+                
+              
+                <symbol id="svg--facebook" viewbox="0 -7 16 30">
+                  <path d="M12 3.303h-2.285c-0.27 0-0.572 0.355-0.572 0.831v1.65h2.857v2.352h-2.857v7.064h-2.698v-7.063h-2.446v-2.353h2.446v-1.384c0-1.985 1.378-3.6 3.269-3.6h2.286v2.503z" />
+                </symbol>
+              
+                <symbol id="svg--github" viewbox="-30 -30 150 150">
+                  <path d="M61.896,52.548c-3.59,0-6.502,4.026-6.502,8.996c0,4.971,2.912,8.999,6.502,8.999
+                  c3.588,0,6.498-4.028,6.498-8.999C68.395,56.574,65.484,52.548,61.896,52.548z M84.527,29.132c0.74-1.826,0.777-12.201-3.17-22.132
+                  c0,0-9.057,0.993-22.76,10.396c-2.872-0.793-7.736-1.19-12.597-1.19s-9.723,0.396-12.598,1.189C19.699,7.993,10.645,7,10.645,7
+                  c-3.948,9.931-3.913,20.306-3.172,22.132C2.834,34.169,0,40.218,0,48.483c0,35.932,29.809,36.508,37.334,36.508
+                  c1.703,0,5.088,0.004,8.666,0.009c3.578-0.005,6.965-0.009,8.666-0.009C62.191,84.991,92,84.415,92,48.483
+                  C92,40.218,89.166,34.169,84.527,29.132z M46.141,80.574H45.86c-18.859,0-33.545-2.252-33.545-20.58
+                  c0-4.389,1.549-8.465,5.229-11.847c6.141-5.636,16.527-2.651,28.316-2.651c0.045,0,0.093-0.001,0.141-0.003
+                  c0.049,0.002,0.096,0.003,0.141,0.003c11.789,0,22.178-2.984,28.316,2.651c3.68,3.382,5.229,7.458,5.229,11.847
+                  C79.686,78.322,65,80.574,46.141,80.574z M30.104,52.548c-3.588,0-6.498,4.026-6.498,8.996c0,4.971,2.91,8.999,6.498,8.999
+                  c3.592,0,6.502-4.028,6.502-8.999C36.605,56.574,33.695,52.548,30.104,52.548z" />
+                </symbol>
+              
+                
+                
+              
+              </svg>
+              
+              <div class="wrapper">
+              <div class="connect">
+              
+                <a href="" class="share twitter">
+                  <svg role="presentation" class="svg--icon">
+                    <use xlink:href="#svg--twitter" />
+                  </svg>
+                  <span class="clip">TWITTER</span>
+                </a>
+              
+                
+              
+                <a href="" rel="author" class="share facebook">
+                  <svg role="presentation" class="svg--icon">
+                    <use xlink:href="#svg--facebook" />
+                    <span class="clip">FACEBOOK</span>
+                  </svg>
+                </a>
+              
+                <a href="" class="share github">
+                  <svg role="presentation" class="svg--icon">
+                    <use xlink:href="#svg--github" />
+                    <span class="clip">GITHUB</span>
+                  </svg>
+                </a>
+              
+                
+                
+              
+              </div>
+              </div>
+            </div>
+          
+            <!-- my skill (start)-->
+            <div id="skill">
+              <section  style="background-image: linear-gradient(to right,rgb(117, 100, 103),rgb(99, 99, 69)); height: 750px;">
+              <div class="bg">
+              <div class="work-arrow" >
+                <p>
+                  <a href="#my-works">Check out my work <i class="fas fa-arrow-down"></i></a>
+                </p>
+              </div>
+              
+            </div>
+            <div class="skills">
+              <div class="right-content">
+                <div>
+                  <h1 class="skills-heading" style="color: #f0f0e6;">My Skills</h1>
+                </div>
+                <div class="skills-bar">
+                  <div class="bar">
+                    <div class="info">
+                      <span>HTML</span>
+                    </div>
+                    <div class="progress-line"><span class="html"></span></div>
+                    <div class="bar">
+                      <div class="info">
+                        <span>CSS</span>
+                      </div>
+                      <div class="progress-line"><span class="css"></span></div>
+                      <div class="bar">
+                        <div class="info">
+                          <span>java</span>
+                        </div>
+                        <div class="progress-line"><span class="bootstrap"></span></div>
+                        <div class="bar">
+                          <div class="info">
+                            <span>JAVASCRIPT</span>
+                          </div>
+                          <div class="progress-line"><span class="javascript"></span></div>
+                          <div class="bar">
+                            <div class="info">
+                              <span>PYTHON</span>
+                            </div>
+                            <div class="progress-line"><span class="c"></span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="work-arrow-2">
+                  <p>
+                    <a href="#my-works">Check out my work <i class="fas fa-arrow-down"></i></a>
+                  
+                  </p>
+                </div>
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+       
+      </section> 
+    </div> 
+    
+  </div>
+  
+     <!-- my skill (end)-->
+    <!--Contact(start)-->
+	<table id="contact" border="0" width="100%"
+		cellpadding="0" cellspacing="0" style="background-image: linear-gradient(to right,black,white);">
+		<tr>
+     
+			<td>
+				<table border="0" cellpadding="15"
+					cellspacing="0" width="80%" align="center">
+					<tr>
+						<td height="180" align="center"
+							valign="middle" colspan="2">
+							<font face="Verdana" size="7"
+								color="black">
+								Contact
+							</font>
+							<hr color="black" width="90">
+						</td>
+					</tr>
+
+					<tr>
+						<td align="center" valign="top">
+							<table border="0" width="50%" cellpadding="15"
+								cellspacing="0" align="center" style="background-image: linear-gradient(to right,pink,rgb(240, 240, 49));">
+								<tr>
+									<td width="30%">
+										<hr color="black">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											Name
+										</font>
+									</td>
+									<td width="70%">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											<input type="text" size="40" required>
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td width="30%">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											Email
+										</font>
+									</td>
+									<td width="70%">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											<input type="email" size="40">
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td width="30%">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											Number
+										</font>
+									</td>
+									<td width="70%">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											<input type="number" size="12">
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td width="30%">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											Message
+										</font>
+									</td>
+									<td width="70%">
+										<font face="Verdana" size="4"
+											color="#ffffff">
+											<textarea rows="5"
+												cols="37">
+											</textarea>
+										</font>
+									</td>
+								</tr>
+								<tr>
+									<td width="30%">
+										
+									</td>
+									<td width="70%">
+										<button type="Submit">
+											<font face="Verdana"
+												size="4" color="black">
+												<b>Submit</b>
+											</font>
+										</button>
+										<hr color="black">
+										<hr color="black">
+									</td>
+								</tr>
+							</table>
+						</td>
+
+					</tr>
+					<tr>
+						<td colspan="2">
+							
+							
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+    
+	</table>
+  
+	<!--Contact(end)-->
+  <!--introduction(start)-->
+	<table id="about" border="0" width="100%"
+  cellpadding="0" cellspacing="0" style="background-image: linear-gradient(to right,rgb(226, 100, 100),rgb(91, 241, 216));">
+  <tr>
+    
+    <td>
+      <table border="0" cellpadding="15"
+        cellspacing="0" width="80%" align="center">
+        <tr>
+          <td height="180" align="center"
+            valign="middle" colspan="2">
+            <font face="Verdana" size="7"
+              color="yellow">
+              Introduction
+            </font>
+            <hr color="#4CAF50" width="90">
+          </td>
+        </tr>
+
+        <tr>
+          <td width="40%">
+                           
+            <img src="ganesh.jpg" style=" border-radius:50%;height: 400px; width: 400px;">   
+
+                          <!-- ganesh images -->
+                          
+          </td>
+
+          <td width="60%">
+            <font face="Verdana" size="4"
+              color="white">
+              Hey, I'm Prashant Narale,<br>
+              a curious and creative  web developer with a passion for web development.
+              
+              <hr color="black">
+              I've always been fascinated by
+              the power of creativeness to inspire, inform, and entertain, 
+              <hr color="black">
+              which is why I've dedicated my career to creating code  that connect with users on a deep level
+               
+              <hr color="black">
+
+               
+
+
+              
+            </font>
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+
+<!--introduction(end)-->
+  <!--Projects(start)-->
+	<table id="projects" border="0" width="100%"
+  cellpadding="0" cellspacing="0" style="background-image: linear-gradient(to right,rgb(95, 250, 142),rgb(220, 72, 240));">
+  <tr>
+    <td>
+      <table border="0" cellpadding="15"
+        cellspacing="0" width="80%" align="center">
+        <tr>
+          <td height="180" align="center"
+            valign="middle" colspan="2">
+            <font face="Verdana" size="7"
+              color="black">
+            My Projects
+            </font>
+            <hr color="black" width="90">
+          </td>
+        </tr>
+
+        <tr>
+          <td height="10">
+            <font face="Times New Roman"
+              size="5" color="black">
+              <ul>
+                <li>
+                  BMI Calculator
+                  <a href="#" style="text-decoration:none">
+                     ➲
+                  </a>
+                </li>
+
+                <li>
+                  <hr color="#c2c0c3">
+                  Calculator
+                  <a href="#"  
+                      style="text-decoration:none"
+                    color="#c2c0c3">
+                     ➲
+                  </a>
+                </li>
+
+                <li>
+                  <hr color="#c2c0c3">
+                  Calendar
+                  <a href="#"
+                  style="text-decoration:none">
+                     ➲
+                  </a>
+                </li>
+
+                <li>
+                  <hr color="#c2c0c3">
+                  ChatBot
+                  <a href="#"
+                  style="text-decoration:none">
+                     ➲
+                  </a>
+                </li>
+
+                <li>
+                  <hr color="#c2c0c3">
+                  Login Page
+                  <a href="#"
+                  style="text-decoration:none">
+                     ➲
+                  </a>
+                </li>
+
+                <li>
+                  <hr color="#c2c0c3">
+                  Forms
+                  <a href="#"
+                  style="text-decoration:none">
+                     ➲
+                  </a>
+                </li>
+
+                <li>
+                  <hr color="#c2c0c3">
+                  Record Room
+                  <a href="#"
+                  style="text-decoration:none">
+                     ➲
+                  </a>
+                </li>
+
+                <li>
+                  <hr color="#c2c0c3">
+                  Snake Game
+                  <a href="#"
+                  style="text-decoration:none">
+                     ➲
+                  </a>
+                </li>
+
+                <li>
+                  <hr color="#c2c0c3">
+                  OTP generater
+                  <a href="#"
+                  style="text-decoration:none">
+                    ➲
+                  </a>
+                </li>
+
+                <li>
+                  <hr color="#c2c0c3">
+                  Birds Fly Game
+                  <a href="#"
+                  style="text-decoration:none">
+                    ➲
+                  </a>
+                </li>
+
+                <li>
+                  <hr color="#c2c0c3">
+                  Music Generate
+                  <a href="#"
+                  style="text-decoration:none">
+                    ➲
+                  </a>
+                </li>
+
+                <li>
+                  <hr color="#c2c0c3">
+                  Pineo
+                  <a href="#"
+                  style="text-decoration:none">
+                    ➲
+                  </a>
+                </li>
+
+                <li>
+                  <hr color="#c2c0c3">
+                  Hostel Management System
+                  <a href="#"
+                  style="text-decoration:none">
+                    ➲ </a>
+                </li>
+
+               
+              </ul>
+              
+            </font>
+          </td>
+
+         
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<!--Projects(end)-->
+</body>
+</html>
